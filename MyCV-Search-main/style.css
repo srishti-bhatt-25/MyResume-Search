@@ -1,0 +1,235 @@
+* {
+    --bg-color: #ebedf2;
+    --glass-color: rgba(16, 15, 15, 0.1);
+    --searchbar-height: 2.5rem;
+    --hover-color: #101012;
+}
+
+body {
+    background: var(--bg-color);
+    margin: 0;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+nav {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.navbar img {
+    width: 24px; /* Adjust width as needed */
+    height: 24px; /* Adjust height as needed */
+    margin-left: 10px; /* Optional: add spacing between icons */
+    vertical-align: middle; /* Aligns images with text if needed */
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(14, 14, 13);
+    padding: 10px;
+}
+
+.navbar a {
+    color: #fff;
+    margin-right: 15px; /* Space between links */
+    text-decoration: none;
+}
+
+.navbar img {
+    width: 28px; /* Adjust width */
+    height: 28px; /* Adjust height */
+    margin-left: 10px; /* Space between icons */
+}
+
+.navbar .right-links {
+    margin-left: auto; /* Pushes this section to the right */
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.light-links {
+    opacity: 0.7;
+}
+
+.white-links {
+    opacity: 1;
+}
+
+.icon-container img {
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+}
+
+.first-container {
+    gap: 0.5rem;
+}
+
+.second-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon-container div {
+    padding: 0.3rem;
+}
+
+.icon-container div:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchbar-container {
+    border: 1px solid var(--glass-color);
+    height: var(--searchbar-height);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--searchbar-height);
+}
+
+.searchbar-container img {
+    height: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.searchbar-container input {
+    height: var(--searchbar-height);
+    outline: none;
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    font-family: poppins, monospace;
+}
+
+.searchbar-container:hover {
+    background-color: var(--hover-color);
+    border: 1px solid transparent;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons-container input {
+    height: var(--searchbar-height);
+    background-color: var(--hover-color);
+    color: white;
+    font-family: poppins, monospace;
+    padding: 0 1rem;
+    border-radius: 0.2rem;
+    font-weight: 300;
+    border: 1px solid transparent;
+}
+
+.buttons-container input:hover {
+    border: 1px solid var(--glass-color);
+}
+
+footer {
+    background-color: #171717;
+}
+
+.first-footer {
+    height: var(--searchbar-height);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2rem;
+    opacity: 0.6;
+    font-weight: 300;
+    border-bottom: 1px solid var(--glass-color);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.6;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links div:not(:nth-of-type(2)) a {
+    padding: 0 0.5rem;
+}
+
+footer img {
+    height: 0.7rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+
+/* make sure to put this */
+
+form {
+    display: none;
+}
+
+@media (max-width: 579px) {
+    .second-links-container {
+        order: -1;
+    }
+}
+
+@media (min-width: 824px) {
+    .footer-links {
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+}
+
